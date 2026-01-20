@@ -59,23 +59,29 @@ Montrer la maîtrise du statique/dynamique avec ISR (Incremental Static Regenera
 - `app/blog/page.tsx`
   - Liste des posts (server fetch)
   
-- `app/blog/[slug]/page.tsx`
+- `app/blog/[id]/page.tsx`
   - Page détail d'un post
-  - Active ISR : `revalidate` toutes les 60s (ou similaire)
-
-- Bonus : `generateMetadata` pour SEO (title/description)
+  - Active ISR : `revalidate` toutes les 60s
+  - `generateStaticParams` pour pré-génération
+  - `generateMetadata` pour SEO (title/description)
+  - `loading.tsx` pour le skeleton UI
+  - `not-found.tsx` pour la gestion d'erreur
 
 ### Points évalués
-- ✅ Routing avec segments dynamiques `[slug]`
+- ✅ Routing avec segments dynamiques `[id]`
 - ✅ ISR avec `revalidate`
-- ✅ `generateStaticParams` (optionnel)
+- ✅ `generateStaticParams` pour pré-génération
 - ✅ SEO avec `generateMetadata`
+- ✅ Gestion d'erreur avec `not-found.tsx`
+- ✅ Loading states avec `loading.tsx`
 
 ### Concepts clés
 - ISR : pages statiques régénérées périodiquement
 - `revalidate: 60` dans `fetch()` ou `export const revalidate = 60`
-- Routes dynamiques avec `[slug]`
+- Routes dynamiques avec `[id]` ou `[slug]`
+- `generateStaticParams` pour pré-générer les pages au build
 - `generateMetadata` pour le SEO dynamique
+- `notFound()` pour gérer les ressources introuvables
 - Différence entre SSG, SSR et ISR
 
 ### API suggérée
@@ -83,7 +89,7 @@ Montrer la maîtrise du statique/dynamique avec ISR (Incremental Static Regenera
 - Posts mockés en local
 
 ### Statut
-⏳ **À faire**
+✅ **Terminé** - Voir `exercice2/README.md` pour les détails
 
 ---
 
@@ -131,7 +137,7 @@ Montrer la maîtrise du statique/dynamique avec ISR (Incremental Static Regenera
 ## Ordre de réalisation recommandé
 
 1. ✅ **Exercice 1** - Base RSC/Client (terminé)
-2. ⏳ **Exercice 2** - ISR et routing
+2. ✅ **Exercice 2** - ISR et routing (terminé)
 3. ⏳ **Exercice 3** - Route Handlers et auth
 
 ## Ressources utiles
