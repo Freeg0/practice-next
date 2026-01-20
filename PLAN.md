@@ -137,11 +137,59 @@ Montrer la maîtrise du statique/dynamique avec ISR (Incremental Static Regenera
 
 ---
 
+## Exercice 4 — "Liste performante & mémoïsation React"
+
+### Objectif
+Démontrer une bonne maîtrise de `useMemo` et `useCallback`, et comprendre les re-renders React.
+
+### Structure à créer
+- `app/perf/page.tsx` (Server Component)
+  - Génère ou fetch une grosse liste d'items
+  - Passe la liste en props à un composant client
+  
+- `app/perf/ListClient.tsx` (Client Component avec `'use client'`)
+  - État local pour search, sort, et un counter indépendant
+  - Filtrage + tri de la liste
+  - Affichage via des composants enfants
+  
+- `app/perf/ItemCard.tsx` (Client Component)
+  - Composant enfant mémoïsé (`memo`)
+  - Reçoit un handler de sélection
+
+### Optimisations à implémenter
+- `useMemo` pour éviter le recalcul du filtrage / tri
+- `useCallback` pour stabiliser le handler passé aux enfants
+
+### Bonus
+- Ajouter un état sans lien avec la liste pour provoquer des re-renders
+- Montrer un cas où `useCallback` est inutile (anti-pattern volontaire)
+
+### Points évalués
+- ✅ Compréhension des re-renders React
+- ✅ Distinction render vs recalcul
+- ✅ Usage pertinent de `useMemo`
+- ✅ Usage pertinent de `useCallback`
+- ✅ Capacité à éviter la sur-optimisation
+
+### Concepts clés
+- `useMemo` : mémoïser des valeurs calculées coûteuses
+- `useCallback` : stabiliser les références de fonctions
+- `React.memo` : prévenir les re-renders inutiles des composants enfants
+- Re-renders : comprendre quand et pourquoi les composants se re-rendent
+- Optimisation : savoir quand optimiser et quand ne pas optimiser
+- Anti-patterns : reconnaître les cas où l'optimisation est inutile
+
+### Statut
+⏳ **À faire**
+
+---
+
 ## Ordre de réalisation recommandé
 
 1. ✅ **Exercice 1** - Base RSC/Client (terminé)
 2. ✅ **Exercice 2** - ISR et routing (terminé)
 3. ✅ **Exercice 3** - Route Handlers et auth (terminé)
+4. ⏳ **Exercice 4** - Liste performante & mémoïsation React (à faire)
 
 ## Ressources utiles
 
