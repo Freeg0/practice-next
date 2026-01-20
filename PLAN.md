@@ -180,7 +180,7 @@ Démontrer une bonne maîtrise de `useMemo` et `useCallback`, et comprendre les 
 - Anti-patterns : reconnaître les cas où l'optimisation est inutile
 
 ### Statut
-⏳ **À faire**
+✅ **Terminé** - Voir `exercice4/README.md` pour les détails
 
 ---
 
@@ -189,7 +189,7 @@ Démontrer une bonne maîtrise de `useMemo` et `useCallback`, et comprendre les 
 1. ✅ **Exercice 1** - Base RSC/Client (terminé)
 2. ✅ **Exercice 2** - ISR et routing (terminé)
 3. ✅ **Exercice 3** - Route Handlers et auth (terminé)
-4. ⏳ **Exercice 4** - Liste performante & mémoïsation React (à faire)
+4. ✅ **Exercice 4** - Liste performante & mémoïsation React (terminé)
 
 ## Ressources utiles
 
