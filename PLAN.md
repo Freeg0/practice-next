@@ -119,18 +119,21 @@ Montrer la maîtrise du statique/dynamique avec ISR (Incremental Static Regenera
 - ✅ Route Handlers (`route.ts`)
 - ✅ Cookies côté serveur (`next/headers`)
 - ✅ `redirect()` dans Server Components
-- ✅ SSR/dynamique avec `cache: 'no-store'`
+- ✅ SSR/dynamique avec `export const dynamic = 'force-dynamic'`
 - ✅ Séparation client/server pour formulaires
+- ✅ Route Handler DELETE pour la déconnexion
 
 ### Concepts clés
 - Route Handlers : API routes dans App Router (`app/api/*/route.ts`)
 - Cookies : `cookies()` de `next/headers` (serveur uniquement)
 - `redirect()` : navigation côté serveur
-- SSR dynamique : `cache: 'no-store'` pour forcer le re-render à chaque requête
+- SSR dynamique : `export const dynamic = 'force-dynamic'` pour forcer le re-render à chaque requête
 - Formulaires : Client Component pour interactivité, submit vers Route Handler
+- Protection de routes : vérification d'authentification côté serveur avant le rendu
+- Déconnexion : Route Handler DELETE pour supprimer le cookie d'authentification
 
 ### Statut
-⏳ **À faire**
+✅ **Terminé** - Voir `exercice3/README.md` pour les détails
 
 ---
 
@@ -138,7 +141,7 @@ Montrer la maîtrise du statique/dynamique avec ISR (Incremental Static Regenera
 
 1. ✅ **Exercice 1** - Base RSC/Client (terminé)
 2. ✅ **Exercice 2** - ISR et routing (terminé)
-3. ⏳ **Exercice 3** - Route Handlers et auth
+3. ✅ **Exercice 3** - Route Handlers et auth (terminé)
 
 ## Ressources utiles
 
